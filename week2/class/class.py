@@ -1,5 +1,9 @@
-class myClass:
-    question = input('What is your favorite season, winter, spring, summer or fall? ')
+class myClass():
+  def method1(self):
+      print("x.question.upper")
+        
+  def method2(self,someString):    
+      print("Software Testing:" + someString)
 
-x = myClass()
-print(x.question.upper())
+user_input = input("What's your favorite season? ")
+print("My favorite season is ", user_input.upper())
