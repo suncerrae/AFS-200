@@ -1,8 +1,16 @@
-def maxOfThree (a,b,c): 
-    sequence=[a,b,c]
+def maxOfThree (sequence): 
+    
     sequence.sort()     
     
     print("Largest number: ", sequence[-1]) 
-    
+list_numbers = []
+for i in range(3):
 
-maxOfThree(8,40,95)
+
+  num = input("Please provide your number: ")
+  print ("The number you provided is ",num)
+
+  list_numbers.append(num) 
+
+
+maxOfThree(list_numbers)

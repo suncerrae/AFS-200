@@ -9,6 +9,8 @@ def countingCases (string):
             lowercases += 1
     print("UpperCase Count: ", uppercases)
     print("LowerCase Count: ", lowercases)
-    
+   
+sentence = input("Please provide your sentence: ")
 
-countingCases("`Lions` are wonderful things!!!!")
+
+countingCases(sentence)
