@@ -1,29 +1,16 @@
+ # Create your models here.
+import datetime
+
 from django.db import models
+from django.utils import timezone
 
 
-# Create your models here.
-class Destination(models.Model):
+class Question(models.Model):
+    # ...
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
-    location = models.CharField(max_length=50)
-    price = models.IntegerField()
-    los = models.IntegerField()
-    discription = models.TextField()
-    img = models.ImageField(upload_to='pics')
-
-class Welcome(models.Model):
-
-    h2 = models.CharField(max_length=50)
-    h1 = models.CharField(max_length=50)
-    p = models.TextField()
-    a1 = models.CharField(max_length=50)
-    a2 = models.CharField(max_length=50)
-
-class Reviews(models.Model):
-    i = models.CharField( max_length=50)
-    p = models.TextField()
-    img = models.ImageField( upload_to='pics')
-    h5 = models.CharField( max_length=50)
-    span =models.CharField( max_length=50)
-
-class Css(models.Model):
-    slick = models.FileField(upload_to='css')
+class Choice(models.Model):
+    # ...
+    def __str__(self):
+        return self.choice_text
